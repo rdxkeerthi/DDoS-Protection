@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Website</title>
+</head>
+<body>
+    <h1>Welcome to the Website</h1>
+    <p>Your IP address is being logged for security purposes.</p>
+    
+    <h3>Get User Data</h3>
+    <button id="getData">Get Logged User Data</button>
+    
+    <div id="userData"></div>
+    
+    <script>
+        document.getElementById('getData').onclick = function() {
+            fetch('/api/user-data')
+                .then(response => response.json())
+                .then(data => {
+                    const userDataDiv = document.getElementById('userData');
+                    userDataDiv.innerHTML = '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
+                })
+                .catch(error => {
+                    console.log('Error:', error);
+                });
+        }
+    </script>
+</body>
+</html>

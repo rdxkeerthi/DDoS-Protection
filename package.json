@@ -1,0 +1,21 @@
+{
+  "name": "sih",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "geoip-lite": "^1.4.10",
+    "helmet": "^7.1.0",
+    "rate-limit-redis": "^4.2.0",
+    "redis": "^4.7.0",
+    "winston": "^3.14.2"
+  },
+  "description": ""
+}
